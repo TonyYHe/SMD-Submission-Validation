@@ -10,6 +10,13 @@ public class Assignment {
     private String name;
     private ArrayList<Submission> submissions = new ArrayList<>();
 
+    public Assignment(String description, Date dueDate, int maxAttempts, String name) {
+        this.description = description;
+        this.dueDate = dueDate;
+        this.maxAttempts = maxAttempts;
+        this.name = name;
+    }
+
     public Submission[] invalidSubmissions() {
         Submission[] invalids = new Submission[submissions.size()];
         int nInvalid = 0;
@@ -35,5 +42,4 @@ public class Assignment {
         }
         return valids;
     }
-
 }

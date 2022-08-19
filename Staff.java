@@ -3,11 +3,17 @@ package com.unimelb.swen30006.workshops;
 import java.util.ArrayList;
 
 public class Staff extends Person {
-    private String roles[];
+    private ArrayList<String> roles = new ArrayList<>();
     private String staffID;
     private ArrayList<Subject> subjects = new ArrayList<>();
 
-    public String[] getRoles() {
+    public Staff(ArrayList<String> roles, String staffID, ArrayList<Subject> subjects) {
+        this.roles = roles;
+        this.staffID = staffID;
+        this.subjects = subjects;
+    }
+
+    public ArrayList<String> getRoles() {
         return roles;
     }
 

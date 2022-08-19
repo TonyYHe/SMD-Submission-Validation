@@ -1,5 +1,7 @@
 package com.unimelb.swen30006.workshops;
 
+import java.util.Date;
+
 // Sample private submission class to be replaced by your implementation
 class Submission {
     // Return two fake files
@@ -31,11 +33,11 @@ class Submission {
         return grade;
     }
 
-    public File[] includedFiles(){
-
+    public File[] includedFiles() {
+        // ideally there should be a separate method to add file in this class, but we are just testing here
         File[] files = new File[2];
-        files[0] = new File();
-        files[1] = new File();
+        files[0] = new File(new Date(), "Hello", "test1.txt");
+        files[1] = new File(new Date(), "World", "test2.pdf");
         return files;
     }
 }
